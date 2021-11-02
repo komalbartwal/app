@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>This is Customer page</h1>
+    <div>
+       <button class="btn btn-primary" (click)='logout()'>Logout</button>
+        <table class="table" border="2">
+            <thead>
+               <tr>
+                  <th>Name</th>
+                  <th>Mobile Number</th>
+                  <!-- <th>Action</th> -->
+               </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of Data?.data?.Leads; let i = index">
+                   <td>{{ data?.LeadName }}</td>
+                   <td>{{ data?.MobileNo }}</td>
+                   <!-- <td><button class="btn btn-warning" type="button" style="width: 15%; justify-content: center; display:flex;" (click)="deletedata(data)">Delete</button></td> -->
+                </tr>
+             </tbody>
+          </table>
+    </div>
+        <h5>Status:{{Data?.Status}}</h5>
+        <h5>Message:{{Data?.Message}}</h5>
+      
+    </div>
+    <button class="btn btn-success" (click)='add()'>Add</button>
