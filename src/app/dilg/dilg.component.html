@@ -1,23 +1,13 @@
 <div class="conatiner">
-    <h1>Log in Form</h1>
-<div [formGroup]="form">
+    <h1 style="text-align: center;">Add Customer</h1><hr>
+<div [formGroup]="form" style="text-align: center;font-size: large;">
     <label for="LeadName" >Lead Name:</label><br>
-    <input  class="inputbox" type="text" id="LeadName" name="LeadName" formControlName="LeadName" ><br>
+    <input  class="inputbox" type="text" id="LeadName" name="LeadName" formControlName="LeadName" ><br><br>
     <label for="MobileNo">MobileNo:</label><br>
-    <input class="inputbox" type="text" id="MobileNo" formControlName="MobileNo" >
+    <input class="inputbox" type="text" id="MobileNo" formControlName="MobileNo" ><br><br>
+    <button type="submit" class="btn btn-primary" (click)='data()'  [routerLink]="['/set']">Submit</button>
     </div>
-  <br>
+  </div>
+    
 
-  <div *ngIf="!form.get('LeadName')?.valid && (!form.get('LeadName')?.dirty ||!form.get('LeadName')?.touched)">
-      <div *ngIf="!form.get('MobileNo')?.valid && (!form.get('MobileNo')?.dirty ||!form.get('MobileNo')?.touched)">
-      
-    <div  [hidden]="!form.get('LeadName')?.errors?.required" style="color: red;">
-       All fild details should be required
-    </div>
-    </div>
-    </div>
-
-  <button type="submit" class="btn btn-primary" (click)='data()'  [routerLink]="['/set']">Submit</button>
-
-</div>
 

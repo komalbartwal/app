@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AssetComponent } from './asset/asset.component';
 import { AuthGuard } from './auth.guard';
+import { GuardGuard } from './guard.guard';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -12,10 +13,11 @@ const routes: Routes = [
   },
   {
   path: 'login',
-  component: LoginComponent
+  component: LoginComponent,
+  canActivate:[GuardGuard]
 },
 {
-  path:'set',
+  path:'customer',
   component:AssetComponent,
   canActivate:[AuthGuard]
 }];

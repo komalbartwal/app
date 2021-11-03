@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-constructor(private http: HttpClient) { }
+constructor(private http: HttpClient,public router:Router) { }
 
   setdata(userdata:any): Observable<any>{
     const user = {
@@ -34,7 +35,14 @@ constructor(private http: HttpClient) { }
     }else{
       return false;
     }
-    // return !!localStorage.getItem('token')
+  }
+
+  guard1(){
+    if(localStorage.getItem('token')){
+      return (this.router.navigate(['/customer']))
+    }else{
+      return false;
+    }
   }
 
 }

@@ -1,21 +1,17 @@
 <div class="body">
 <div class="conatiner">
 <div class="form" [formGroup]="loginform" (ngSubmit)= "setdata()">
-  <h1 style="margin-left: 25%; font-weight: bold;font-size: 30px;">Login Form</h1><br>
-    <label style="margin-left: 15%;" for="username" >User Name:</label><br>
-    <input  class="inputbox" type="text" id="username" name="username" formControlName="username" ><br><br>
-    <label style="margin-left: 15%;" for="password">Password:</label><br>
-    <input class="inputbox" type="text" id="password" formControlName="password" ><br><br>
+  <h1 style="margin-left:30%;padding-top: 4%; font-weight: bold;font-size: 30px;">Login Form</h1><hr>
+    <!-- <label style="margin-left: 15%;" for="username" >User Name:</label><br> -->
+    <input  class="inputbox" placeholder="Username" type="text" id="username" name="username" formControlName="username" ><br><br>
+    <!-- <label style="margin-left: 15%;" for="password">Password:</label><br> -->
+    <input class="inputbox" type="text" placeholder="Password" id="password" formControlName="password" ><br><br>
     <div *ngIf="!loginform.get('username')?.valid && (!loginform.get('username')?.dirty ||!loginform.get('username')?.touched)">
       <div *ngIf="!loginform.get('password')?.valid && (!loginform.get('password')?.dirty ||!loginform.get('password')?.touched)">
-      
-    <div  [hidden]="!loginform.get('username')?.errors?.required" style="color: red;margin-left: 15%;">
-       Please fill the data
     </div>
     </div>
-    </div>
-    <button style="margin-left: 15%;" type="submit" class="btn btn-success" (click)="setdata()" [disabled]="!loginform.valid" [routerLink]="['/set']">Login</button>
+    <button style="margin-left: 39%;" type="submit" class="btn btn-success" (click)="setdata()" [disabled]="!loginform.valid" [routerLink]="['/customer']">Login</button>
 
-    </div>
+    
 </div>
 </div> 
