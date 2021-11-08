@@ -1,26 +1,26 @@
-<nav class="navbar navbar-expand-lg" style="background-color: lightgray;">
+<nav class="navbar navbar-expand-lg" style="background-color:black;">
    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
          <li class="nav-item active">
-            <a class="nav-link"  routerLink ="/customer" style=" font-weight:bold;font-size: 30px;">Customer</a>
+            <a class="nav-link"  style="font-size: 30px;color: white;">Customer</a>
          </li>
       </ul>
    </div>
    <div class="row align-items-end">
       <ul class="navbar-nav">
          <li class="nav-item active">
-            <a class="btn btn-danger"  (click)="logout()">LogOut</a>
+            <a class="nav-link" style="cursor: pointer;color: white;"  (click)="logout()">LogOut</a>
          </li>
       </ul>
   </div>
       
   </nav>
   <div class="b">
-   <button class="btn btn-success" id="1" (click)='add()'>Add</button>
+   <button class="btn btn-primary" id="1" (click)='add()'>Add</button>
   </div><br>
 <div class="container">
     <div>
-        <table class="table" border="2" style="font-size: large;">
+        <table class="table" border="2" style="text-align: center;">
             <thead>
                <tr>
                   <th>Name</th>

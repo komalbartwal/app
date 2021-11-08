@@ -11,7 +11,6 @@ import { UserService } from '../user.service';
 export class DilgComponent implements OnInit {
 
   constructor(public f: FormBuilder,private service: UserService,private dialogRef:MatDialogRef<DilgComponent>) { }
-  dilg: any;
   myData1 :any;
 
   data(){
@@ -20,6 +19,9 @@ export class DilgComponent implements OnInit {
     this.myData1 = response;
       console.log(response);
   })
+}
+close(){
+  this.dialogRef.close(true);
 }
 
   form = this.f.group({

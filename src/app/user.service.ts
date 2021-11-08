@@ -37,12 +37,5 @@ constructor(private http: HttpClient,public router:Router) { }
     }
   }
 
-  guard1(){
-    if(localStorage.getItem('token')){
-      return (this.router.navigate(['/customer']))
-    }else{
-      return false;
-    }
-  }
 
 }

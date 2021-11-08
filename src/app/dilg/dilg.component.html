@@ -1,11 +1,15 @@
 <div class="conatiner">
-    <h1 style="text-align: center;">Add Customer</h1><hr>
+    <h1 style="text-align: center;color: black;">Add Customer</h1><hr>
 <div [formGroup]="form" style="text-align: center;font-size: large;">
-    <label for="LeadName" >Lead Name:</label><br>
+    <label for="LeadName" >Lead Name</label>&nbsp;
     <input  class="inputbox" type="text" id="LeadName" name="LeadName" formControlName="LeadName" ><br><br>
-    <label for="MobileNo">MobileNo:</label><br>
+    <label for="MobileNo">Mobile No</label>&nbsp;
     <input class="inputbox" type="text" id="MobileNo" formControlName="MobileNo" ><br><br>
-    <button type="submit" class="btn btn-primary" (click)='data()'  [routerLink]="['/set']">Submit</button>
+    </div>
+    <div style="float: right;">
+        <button type="submit" class="btn btn-success " (click)='data()'  [routerLink]="['/customer']">Submit</button>&nbsp;
+        <button class="btn btn-warning" (click)="close()"  [routerLink]="['/customer']">Close</button>
+    
     </div>
   </div>
     

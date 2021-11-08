@@ -20,7 +20,7 @@ canActivate(route: ActivatedRouteSnapshot,
   else{
     this.router.navigate(['/login'])
     return false;
-  }
+  } 
 }
 }
 

@@ -10,7 +10,7 @@ import { UserService } from '../user.service';
 export class LoginComponent implements OnInit {
 
   constructor(public fb: FormBuilder, private service: UserService) { }
-  userdata!:any; 
+  
 
   loginform = this.fb.group({
     username:['',[Validators.required]],
